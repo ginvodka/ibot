@@ -1,0 +1,21 @@
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type" : "call_to_actions",
+  "thread_state" : "existing_thread",
+  "call_to_actions":[
+      {
+          "type":"web_url",
+          "title":"View Website",
+          "url":"http://integreatbot.herokuapp.com/"
+        },
+    {
+      "type":"postback",
+      "title":"Apply for a job",
+      "payload":"JOB_APPLY"
+    },
+    {
+      "type":"postback",
+      "title":"Start here",
+      "payload":"GET_STARTED"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAVZCWtMTfn8BALUGisKiK25trGiLqLNdN5gndws8iHnODBhu1C8dnHi6ULpBZC365MhHpfFJtmphgeSeDJWkZCa2WuzcJpmEQFfbwG6wBjr4JgZBZAQGVVpOsrVEA03rZBBpv2gCYOjyRGsrArb6zCc0ofGdaxPWFlpIWkCwBxAZDZD"
